@@ -1,0 +1,563 @@
+SQL> SPOOL custorders_schema_output.txt
+SQL> бн.. the SQL Developer Generated Script goes here бн...
+
+Error starting at line : 6 in command -
+бн.. the SQL Developer Generated Script goes here бн...
+Error report -
+Unknown Command
+
+SQL> -----------------------------------------------------
+SQL> SPOOL off
+SQL> set echo off
+
+Table ADDRESS dropped.
+
+
+Table CABIN dropped.
+
+
+Table COUNTRY dropped.
+
+
+Table CRUISE dropped.
+
+
+Table CRUISE_PORT dropped.
+
+
+Table LANUGE dropped.
+
+
+Table MANIFEST dropped.
+
+
+Table OPERATOR dropped.
+
+
+Table PASSENGER dropped.
+
+
+Error starting at line : 36 in command -
+DROP TABLE port CASCADE CONSTRAINTS
+Error report -
+ORA-00942: table or view does not exist
+00942. 00000 -  "table or view does not exist"
+*Cause:    
+*Action:
+
+Table PORT_TEMP dropped.
+
+
+Table PORT_TOUR dropped.
+
+
+Table SHIP dropped.
+
+
+Table TOUR dropped.
+
+
+Error starting at line : 46 in command -
+DROP TABLE tour_lanu CASCADE CONSTRAINTS
+Error report -
+ORA-00942: table or view does not exist
+00942. 00000 -  "table or view does not exist"
+*Cause:    
+*Action:
+
+Error starting at line : 48 in command -
+DROP TABLE tour_participant CASCADE CONSTRAINTS
+Error report -
+ORA-00942: table or view does not exist
+00942. 00000 -  "table or view does not exist"
+*Cause:    
+*Action:
+
+Table ADDRESS created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+INDEX ADDRESS__IDX created.
+
+
+Table ADDRESS altered.
+
+
+Table CABIN created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Table CABIN altered.
+
+
+Table COUNTRY created.
+
+
+Table COUNTRY altered.
+
+
+Table CRUISE created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Table CRUISE altered.
+
+
+Table CRUISE_PORT created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Table CRUISE_PORT altered.
+
+
+Table LANUGE created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Table LANUGE altered.
+
+
+Table MANIFEST created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Table MANIFEST altered.
+
+
+Table OPERATOR created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Table OPERATOR altered.
+
+
+Table PASSENGER created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Table PASSENGER altered.
+
+
+Error starting at line : 282 in command -
+CREATE TABLE port (
+    port_code       VARCHAR2(50) NOT NULL,
+    port_name       VARCHAR2(50) NOT NULL,
+    port_country    VARCHAR2(50) NOT NULL,
+    port_population VARCHAR2(50) NOT NULL,
+    port_logitude   NUMBER(90) NOT NULL,
+    port_latitude   NUMBER(180) NOT NULL,
+    coun_code       NUMBER(9) NOT NULL
+)
+Error report -
+ORA-01727: numeric precision specifier is out of range (1 to 38)
+01727. 00000 -  "numeric precision specifier is out of range (1 to 38)"
+*Cause:    
+*Action:
+
+Error starting at line : 292 in command -
+COMMENT ON COLUMN port.port_code IS
+    'port code'
+Error report -
+ORA-00942: table or view does not exist
+00942. 00000 -  "table or view does not exist"
+*Cause:    
+*Action:
+
+Error starting at line : 295 in command -
+COMMENT ON COLUMN port.port_name IS
+    'port name'
+Error report -
+ORA-00942: table or view does not exist
+00942. 00000 -  "table or view does not exist"
+*Cause:    
+*Action:
+
+Error starting at line : 298 in command -
+COMMENT ON COLUMN port.port_country IS
+    'port country'
+Error report -
+ORA-00942: table or view does not exist
+00942. 00000 -  "table or view does not exist"
+*Cause:    
+*Action:
+
+Error starting at line : 301 in command -
+COMMENT ON COLUMN port.port_population IS
+    'port population'
+Error report -
+ORA-00942: table or view does not exist
+00942. 00000 -  "table or view does not exist"
+*Cause:    
+*Action:
+
+Error starting at line : 304 in command -
+COMMENT ON COLUMN port.port_logitude IS
+    'port logitude range(-90~90)'
+Error report -
+ORA-00942: table or view does not exist
+00942. 00000 -  "table or view does not exist"
+*Cause:    
+*Action:
+
+Error starting at line : 307 in command -
+COMMENT ON COLUMN port.port_latitude IS
+    'port latitude range(-180~180)'
+Error report -
+ORA-00942: table or view does not exist
+00942. 00000 -  "table or view does not exist"
+*Cause:    
+*Action:
+
+Error starting at line : 310 in command -
+CREATE UNIQUE INDEX port__idx ON
+    port (
+        coun_code
+    ASC )
+Error report -
+ORA-00942: table or view does not exist
+00942. 00000 -  "table or view does not exist"
+*Cause:    
+*Action:
+
+Error starting at line : 315 in command -
+ALTER TABLE port ADD CONSTRAINT port_pk PRIMARY KEY ( port_code )
+Error report -
+ORA-00942: table or view does not exist
+00942. 00000 -  "table or view does not exist"
+*Cause:    
+*Action:
+
+Table PORT_TEMP created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Table PORT_TEMP altered.
+
+
+Table PORT_TOUR created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Table PORT_TOUR altered.
+
+
+Table SHIP created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Table SHIP altered.
+
+
+Table TOUR created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Table TOUR altered.
+
+
+Table TOUR_LANU created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Table TOUR_LANU altered.
+
+
+Table TOUR_PARTICIPANT created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Table TOUR_PARTICIPANT altered.
+
+
+Table PASSENGER altered.
+
+
+Table MANIFEST altered.
+
+
+Table ADDRESS altered.
+
+
+Table CRUISE_PORT altered.
+
+
+Table MANIFEST altered.
+
+
+Table TOUR_PARTICIPANT altered.
+
+
+Table TOUR_LANU altered.
+
+
+Table SHIP altered.
+
+
+Table TOUR_PARTICIPANT altered.
+
+
+Table MANIFEST altered.
+
+
+Table LANUGE altered.
+
+
+Error starting at line : 534 in command -
+ALTER TABLE port
+    ADD CONSTRAINT port_country FOREIGN KEY ( coun_code )
+        REFERENCES country ( coun_code )
+Error report -
+ORA-00942: table or view does not exist
+00942. 00000 -  "table or view does not exist"
+*Cause:    
+*Action:
+
+Error starting at line : 538 in command -
+ALTER TABLE cruise_port
+    ADD CONSTRAINT port_cruise_port FOREIGN KEY ( port_code )
+        REFERENCES port ( port_code )
+Error report -
+ORA-00942: table or view does not exist
+00942. 00000 -  "table or view does not exist"
+*Cause:    
+*Action:
+
+Error starting at line : 542 in command -
+ALTER TABLE port_temp
+    ADD CONSTRAINT port_temp FOREIGN KEY ( port_code )
+        REFERENCES port ( port_code )
+Error report -
+ORA-00942: table or view does not exist
+00942. 00000 -  "table or view does not exist"
+*Cause:    
+*Action:
+
+Error starting at line : 546 in command -
+ALTER TABLE port_tour
+    ADD CONSTRAINT port_tour FOREIGN KEY ( port_code )
+        REFERENCES port ( port_code )
+Error report -
+ORA-00942: table or view does not exist
+00942. 00000 -  "table or view does not exist"
+*Cause:    
+*Action:
+
+Table TOUR_PARTICIPANT altered.
+
+
+Table CABIN altered.
+
+
+Table CRUISE altered.
+
+
+Table TOUR_LANU altered.
+
+
+Table PORT_TOUR altered.
+
